@@ -10,6 +10,8 @@ from dash.dependencies import Input, Output
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+server = app.server
+
 
 gdp = requests.get(
     "https://api.stlouisfed.org/fred/series/observations?series_id=GDPC1&api_key=7094417a738f239ea845caa840d51422&file_type=json").json()
